@@ -1,0 +1,13 @@
+/**
+* Write a method removeEvenLength that takes an ArrayList of Strings as a parameter 
+* and that removes all of the strings of even length from the list.
+*/
+
+public static void removeEvenLength(ArrayList<String> l){
+  for(int i = l.size()-1; i>=0; i--){
+      if(l.get(i).length()%2==0){
+         l.remove(l.get(i));
+       }
+  } 
+    
+}
