@@ -1,0 +1,19 @@
+/**
+* Write a method maxLength that takes a Set of strings as a parameter and that returns the length of the longest string in the set. 
+* If your method is passed an empty set, it should return 0.
+*/
+
+public static int maxLength(Set<String> set){
+    Iterator<String> it = set.iterator();
+    if(set.isEmpty()){
+        return 0;
+    } 
+    int max = it.next().length();
+    while(it.hasNext()){
+        String word = it.next();
+            if(word.length()>max){
+                max =word.length();
+            }
+    }
+        return max;
+}
