@@ -8,6 +8,6 @@
 
 public void removeEvenLength(Set<String> set){
     for(String words: set){
-        set.removeIf((words.length() -> words.length()%2 != 0);
+        set.removeIf(words.length() -> words.length()%2 != 0);
     }   
 }
