@@ -1,0 +1,25 @@
+/**
+* Write a method maxOccurrences that accepts a List of integers as a parameter and returns the number of times the most 
+* frequently occurring integer (the "mode") occurs in the list. 
+* Solve this problem using a Map as auxiliary storage. If the list is empty, return 0.
+*/
+
+public static int maxOccurrences(List<Integer> list){
+  if(list.isEmpty()){
+     return 0;
+ }
+  Map<Integer, Integer> map = new TreeMap<Integer, Integer>();
+    Iterator<Integer> it = list.iterator();
+   
+    while(it.hasNext()){
+      int current = it.next();
+    if(map.containsKey(current)){
+       int count = map.get(current);
+       map.put(current, count + 1);
+    } else {
+       map.put(current, 1);
+    } 
+  }
+    //find the most occuring key
+    return Collections.max(map.values());
+    }
